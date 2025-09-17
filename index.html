@@ -15,7 +15,27 @@
             <h1 class="heading">Generate a <br> <span class="green">random password</span></h1>
             <h2 class="sub_heading">Never use an insecure password again.</h2>
 
-            <button onclick="generate()" class="btn">Generate passwords</button>
+            <div class="symbol_quantity">
+
+                <label for="quantity">Password length</label>
+                <select id="password-length" name="quantity">
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option selected value="16">16</option>
+                    <option value="24">24</option>
+                    <option value="32">32</option>
+                </select>
+            </div>
+            <div class="toggle-btn-wrapper">
+
+                <button onclick="generate()" class="btn">Generate passwords</button>
+                
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+            </div>
 
             <span id="line"></span>
 
