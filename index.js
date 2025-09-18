@@ -22,7 +22,7 @@ secondPassword.addEventListener('click', async () =>
 	await navigator.clipboard.writeText(secondPassword.textContent)
 );
 
-function arrayMerge() {   //building 
+function arrayMerge() {
 
     let characters = []
 
