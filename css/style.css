@@ -70,6 +70,20 @@ main {
     transform: scale(1.15);
 }
 
+.button-toggles {
+  color: #FFFFFF;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -108,7 +122,7 @@ main {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #10B981;
 }
 
 input:focus + .slider {

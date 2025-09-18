@@ -15,26 +15,58 @@
             <h1 class="heading">Generate a <br> <span class="green">random password</span></h1>
             <h2 class="sub_heading">Never use an insecure password again.</h2>
 
-            <div class="symbol_quantity">
+            <div class="button-toggles">
+                <div class="generate-quantity-wrapper">
+                    <div class="symbol_quantity">
+        
+                        <label for="quantity">Password length</label>
+                        <select id="password-length" name="quantity">
+                            <option value="6">6</option>
+                            <option value="12">12</option>
+                            <option selected value="16">16</option>
+                            <option value="24">24</option>
+                            <option value="32">32</option>
+                        </select>
+                        
+                    </div>
+                    
+                    <button onclick="generate()" class="btn">Generate passwords</button>
+                </div>
 
-                <label for="quantity">Password length</label>
-                <select id="password-length" name="quantity">
-                    <option value="6">6</option>
-                    <option value="12">12</option>
-                    <option selected value="16">16</option>
-                    <option value="24">24</option>
-                    <option value="32">32</option>
-                </select>
-            </div>
-            <div class="toggle-btn-wrapper">
+                <div class="flex-wrapper">
 
-                <button onclick="generate()" class="btn">Generate passwords</button>
-                
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+                    <div>
+                        Special Symbols
+                        <label class="switch">
+                            <input onclick="arrayMerge(numbers)" id="symbols" checked type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+    
+                    <div>
+                        Uppercase
+                        <label class="switch">
+                            <input onclick="arrayMerge(numbers)" id="uppercase" checked type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
 
+                    <div>
+                        Lowercase
+                        <label class="switch">
+                            <input onclick="arrayMerge(numbers)" id="lowercase" checked type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+    
+                    <div>
+                        Numbers
+                        <label class="switch">
+                            <input onclick="arrayMerge(numbers)" id="numbers" checked type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
 
             <span id="line"></span>
