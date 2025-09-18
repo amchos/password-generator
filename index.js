@@ -14,12 +14,32 @@ passwordLenElement.addEventListener("change", function() {
     passwordLength = passwordLenElement.value
 });
 
-firstPassword.addEventListener('click', async () => 
+firstPassword.addEventListener('click', async () => {
+
 	await navigator.clipboard.writeText(firstPassword.textContent)
 
+    if(firstPassword.textContent != '') {
+        let temporary = firstPassword.textContent
+        firstPassword.textContent = 'Copied!'
+        setInterval(() => {
+            firstPassword.textContent = temporary, 200
+        }, 2000);
+    }
+}
 );
-secondPassword.addEventListener('click', async () => 
+
+secondPassword.addEventListener('click', async () => {
+
 	await navigator.clipboard.writeText(secondPassword.textContent)
+
+    if(secondPassword.textContent != '') {
+        let temporary = secondPassword.textContent
+        secondPassword.textContent = 'Copied!'
+        setInterval(() => {
+            secondPassword.textContent = temporary, 200
+        }, 2000);
+    }
+}
 );
 
 function arrayMerge() {
